@@ -56,11 +56,23 @@ function CadastrodeProdutos() {
   }
 
   return (
-    <Container maxWidth="md" sx={{ mt: 5 }}>
+    <Container
+      maxWidth="md"
+      style={{
+        marginTop: "40px",
+      }}
+    >
       <Grid container spacing={4}>
         {/* COLUNA 1: FORMULÁRIO DE CADASTRO */}
         <Grid item xs={12} md={5}>
-          <Paper sx={{ p: 3 }}>
+          <Paper
+            style={{
+              maxHeight: "400px",
+              overflow: "auto",
+              padding: "16px",
+              borderRadius: "12px",
+            }}
+          >
             <Typography variant="h6" gutterBottom>
               Cadastrar Novo
             </Typography>
@@ -93,6 +105,11 @@ function CadastrodeProdutos() {
                 variant="contained"
                 onClick={adicionarProduto}
                 disabled={nome === "" || categoria === ""}
+                style={{
+                  backgroundColor: "#1976d2",
+                  padding: "10px",
+                  fontWeight: "bold",
+                }}
               >
                 Adicionar à Lista
               </Button>

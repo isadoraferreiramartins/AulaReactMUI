@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Typography, Box } from "@mui/material";
+import Swal from "sweetalert2";
+
 
 function MonitordeEstoque() {
   const [quantidade, setQuantidade] = React.useState(10);
@@ -8,7 +10,12 @@ function MonitordeEstoque() {
   React.useEffect(
     function () {
       if (quantidade === 0) {
-        alert("Atenção: O estoque acabou!");
+             Swal.fire({
+         title: 'Erro!',
+         text: 'Estoque já está zerado',
+         icon: 'error',
+         confirmButtonText: 'Entendi'
+       });
       }
     },
     [quantidade],

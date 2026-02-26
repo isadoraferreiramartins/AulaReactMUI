@@ -21,7 +21,7 @@ import Swal from "sweetalert2";
 
 // Importações dos arquivos JSON internos
 import { clientesDisponiveis } from "../Dados/datacliente";
-import { clientesIniciais } from "/Dados/dadosClientes";
+import { clientesIniciais } from "../Dados/dadosClientes";
 
 
 function CadastroCliente() {
